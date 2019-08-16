@@ -13,24 +13,25 @@
         "Ilma Sra." para o sexo informado como feminino. Apresente na sequência da mensagem impressa o nome da pessoa.
     </h2>
     Nome: <input type="text" id="nome">
-    Sexo: Omi<input type="radio" id="masc"> Muie<input type="radio" id="femi">
+    Sexo: Omi<input type="radio" id="masc" onclick="omi"> Muie<input type="radio" id="femi">
     <button onclick="people">Go</button>
     <div id="saida"></div><div id="saida2"></div>
 </body>
     <script>
     
-        function people(params) {
-            
+            function name(params) {
+                
             var x = document.getElementById("masc").checked;
             y = document.getElementById("femi").uncheck;
             document.getElementById("saida").innerHTML = x;
+            }
 
+            function name(params) {
+                
             var y = document.getElementById("femi").checked;
             x = document.getElementById("masc").uncheck;
             document.getElementById("saida").innerHTML = y;
 
-            
-        }
-
+            }
     </script>
 </html>
