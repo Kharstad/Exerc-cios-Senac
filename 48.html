@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>
+        48 - Elaborar um algoritmo em pseudocódigo que efetue a leitura de um
+        número inteiro e apresentar uma mensagem informando se o númro é par ou impar.
+    </h2>
+    <label>press a number</label>
+    <input type="text" id="valor">
+    <button onclick="parImp()">Go</button>
+    <div id="saida">
+
+    </div>
+
+</body>
+    <script>
+
+        function parImp(params) {
+
+        var num = document.querySelector("#valor").value;
+            
+            if (num % 2 == 0) {
+                //console.log("Par");
+                document.querySelector("#saida").innerHTML = "<p>Par</p>"
+            }else{
+                //console.log("Impar");
+                document.querySelector("#saida").innerHTML = "<p>Impar</p>"
+            }
+
+        }
+
+    </script>
+</html>
