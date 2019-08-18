@@ -16,19 +16,19 @@
 
     <input type="text" id="numero"/>
     <p></p>
-    [A]<label id="varA"/>
+    [A] = <label id="varA"></label>
     <p></p>
-    [B]<label id="varB"/>
+    [B] = <label id="varB"></label>
     <p></p>
-    <button onkeypress="num()">Go</button>
+    <button onclick="num()">Go</button>
 
 </body>
     <script>
-        
-        var num = document.querySelector("#numero").value;
 
     function num() {
-        
+
+        var num = document.querySelector("#numero").value;
+
         if (num > 0) {
             document.querySelector("#varA").innerHTML = num;
         } else {
@@ -36,11 +36,7 @@
         }
 
     }
-
-    function saida(texto) {
-        document.querySelector("#saida").innerHTML = texto;
-    }
-        
+      
     
     </script>
 </html>

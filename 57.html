@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+    57) Escrever um algoritmo para ler três valores inteiros e
+    escrever na tela o maior e o menor deles. Considere que
+    todos os valores são diferentes.
+    </h2>
+
+    <input type="number" id="a" placeholder="Primeiro número" />
+    <input type="number" id="b" placeholder="Segundo número"/>
+    <input type="number" id="c" placeholder="Terceiro número"/>
+    <p></p>
+    <button onclick="dsc()">Descobrir</button>
+    <p></p>
+    Maior <label id="maior"></label>
+    <p></p>
+    Menor <label id="menor"></label>
+
+</body>
+
+<script>
+
+    function dsc() {
+
+        var a = parseInt(document.querySelector("#a").value);
+        var b = parseInt(document.querySelector("#b").value);
+        var c = parseInt(document.querySelector("#c").value);
+
+        if(a > b && a > c){
+			document.querySelector("#maior").innerHTML = a;
+		}
+		else if(b > a && b > c){
+			document.querySelector("#maior").innerHTML = b;
+		}
+		else{
+			document.querySelector("#maior").innerHTML = c;
+		}
+
+        if(a < b && a < c){
+			document.querySelector("#menor").innerHTML = a;
+		}
+		else if(b < a && b < c){
+			document.querySelector("#menor").innerHTML = b;
+		}
+		else{
+			document.querySelector("#menor").innerHTML = c;
+		}
+
+    }
+
+</script>
+
+</html>
