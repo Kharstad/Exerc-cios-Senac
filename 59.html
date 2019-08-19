@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+    59) Escrever um algoritmo para ler a quantidade de horas/aula
+    de dois professores e o valor por hora recebido por cada um.
+    Mostrar na tela qual dos professores tem salário total maior.
+    </h2>
+    <p></p>
+    Professor X <input type="number" id="h1" placeholder="Horas Trabalhadas"/>
+    Recebido R$<input type="number" id="r1" disabled="disabled"/>
+    <p></p>
+    Professor Y <input type="number" id="h2" placeholder="Horas Trabalhadas"/>
+    Recebido R$<input type="number" id="r2" disabled="disabled"/>
+    <p></p>
+    Maior salário é do Professor <label id="resultado"></label>
+    <p></p>
+    <button onclick="calc()">Calcular</button>
+</body>
+    <script>
+    
+        function calc() {
+            
+            var h1 = parseInt(document.querySelector("#h1").value);
+            var h2 = parseInt(document.querySelector("#h2").value);
+            var r1 = parseInt(document.querySelector("#r1").value);
+            var r2 = parseInt(document.querySelector("#r2").value);
+            var shr = parseInt(17);
+
+            var profx = h1 * shr;
+            var profy = h2 * shr;
+
+            document.querySelector("#r1").value = profx;
+            document.querySelector("#r2").value = profy;
+                
+                if (profx > profy) {
+                    document.querySelector("#resultado").innerHTML = " X com o salário de R$ " + profx;
+                } else {
+                    document.querySelector("#resultado").innerHTML = " Y com o salário de R$ " + profy;
+                }
+
+
+        }
+
+    </script>
+</html>
