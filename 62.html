@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<body ng-app="ex62" ng-controller="ctrl62">
+    <h2>
+        62) Escrever um algoritmo para ler dois valores e uma das
+        seguintes operações a serem executadas (codificadas da
+        seguinte forma: 1 – Adição, 2 – Subtração, 3 – Multiplicação e
+        4 – Divisão). Calcular e escrever o resultado dessa operação
+        sobre os dois valores lidos.
+    </h2>
+    <br>
+    <input type="text" ng-model="valor">
+    <label>{{saida(valor)}}</label> {{valor}}
+</body>
+</html>
+<script>
+    var app = angular.module("ex62", []);
+    app.controller("ctrl48", function ($scope) {
+        $scope.saida = function (num) {
+            
+        }
+    })
+</script>
