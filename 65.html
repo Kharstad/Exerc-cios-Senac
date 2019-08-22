@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<body ng-app="ex65" ng-controller="ctrl65">
+    <h2>
+        65) Faça um algoritmo que receba o valor do salário de uma
+        pessoa e o valor de um financiamento pretendido. Caso o
+        financiamento seja menor ou igual a 5 vezes o salário da
+        pessoa, o algoritmo deverá escrever “Financiamento
+        Concedido”; senão, ele deverá escrever “Financiamento
+        Negado”. Independente de conceder ou não o financiamento,
+        o algoritmo escreverá depois a frase “Obrigado por nos
+        consultar.”
+    </h2>
+    <input type="number" [(ngModel)]="valor" placeholder="digite seu salário" />
+    <input type="text" [(ngModel)]="financiamento" placeholder="digite seu financiamento" />
+    <br/>
+    <div *ngIf="valor" *ngIf="financiamento" ng-bind-html="saida"></div>
+</body>
+</html>
+<script>
+    var app = angular.module("ex65", []);
+    app.controller("ctrl65", function($scope){
+        
+    })
+</script>
