@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<body ng-app="ex50" ng-controller="ctrl50">
+    <h2>
+        Elaborar um algoritmo em pseudocodigo que efetue a leitura do nome e do sexo de uma pessoa, apresentando
+        como saída umda das seguintes mensagens: "Ilmo Sr.", para os sexo informado como masculino, ou a mensagem
+        "Ilma Sra." para o sexo informado como feminino. Apresente na sequência da mensagem impressa o nome da pessoa.
+    </h2>
+    Nome: <input type="text" ng-model="nome">
+    Sexo: Omi<input type="radio" name="sexo" ng-model="sexo" value="m" ng-checked="true"> Muie<input type="radio" name="sexo" ng-model="sexo" value="f">
+    <div ng-if="nome" ng-bind-html="saida(nome,sexo)"></div>
+</body>
+    <script>
+
+        var app = angular.module("ex50", ['ngSanitize']);
+        app.controller("ctrl50", function ($scope){
+        $scope.saida = function (nome, sexo){
+                if (sexo == m) {
+                    return "Ilmo Sr. " + nome;
+                } else {
+                    return "Ilma Sra. " + nome;
+                }
+            }
+        })
+        
+        /*function people() {
+
+            var nome = document.querySelector("#nome").value;
+            var m = document.querySelector("#male").checked;
+            document.getElementById("male").checked = true;
+
+            if (m == true) {               
+                document.querySelector("#saida").innerHTML = "Ilmo Sr. " + nome;
+            } else {
+                document.querySelector("#saida").innerHTML = "Ilma Sra. " + nome;
+            }
+
+        }
+
+        function saida(texto) {
+            document.querySelector("#saida").innerHTML = texto;
+        }*/
+
+    </script>
+</html>
