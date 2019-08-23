@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.js"></script>
+</head>
+
+<body ng-app="ex74" ng-controller="ctrl74">
+    <h2>
+            76) Construa um algoritmo, em javascript, que leia 10 valores
+            inteiros e positivos e:
+            <p>· Encontre o maior valor</p>
+            <p>· Encontre o menor valor</p>
+            <p>· Calcule a média dos números lidos</p>
+    </h2>
+
+    <input type="number" ng-model="n1" placeholder="1º Número">
+    <input type="number" ng-model="n2" placeholder="2º Número">
+    <input type="number" ng-model="n3" placeholder="3º Número">
+    <input type="number" ng-model="n4" placeholder="4º Número">
+    <input type="number" ng-model="n5" placeholder="5º Número"><p></p>
+    <input type="number" ng-model="n6" placeholder="6º Número">
+    <input type="number" ng-model="n7" placeholder="7º Número">
+    <input type="number" ng-model="n8" placeholder="8º Número">
+    <input type="number" ng-model="n9" placeholder="9º Número">
+    <input type="number" ng-model="n10" placeholder="10º Número"><p></p>
+
+    <label></label><p></p>
+    <label></label><p></p>
+
+    <div ng-bind-html="saida(mult, ini, fim)"></div>
+</body>
+
+</html>
+<script>
+    var app = angular.module('ex74', ['ngSanitize']);
+    app.controller("ctrl74", function ($scope, $sce) {
+        $scope.saida = function (mult, ini, fim) { /* variáveis do HTML */
+            let result = "";
+            for (i = ini; i <= fim; i++) { /* Sistema de repetição com definição de inicio e fim com as variaveis ini & fim*/
+                if (i % mult == 0) {
+                    result += "<p>" + i + " multimplo de " + mult + "</p>"; /* Número Multiplo de mult */
+                } else {
+                    result += "<p>" + i + "</p>" /* Continuação da operação */
+                }
+            }
+            return $sce.trustAsHtml(result)
+        }
+    })
+
+</script>

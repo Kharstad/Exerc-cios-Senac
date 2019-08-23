@@ -16,8 +16,13 @@
         sobre os dois valores lidos.
     </h2>
     <br>
-    <input type="text" ng-model="valor">
-    <label>{{saida(valor)}}</label> {{valor}}
+    <input type="number" ng-model="v1">
+    <input type="number" ng-model="v2">
+    <br/>
+    <label ng-if="v2" ng-if="v1">Soma {{v1 + v2}}</label> <br>
+    <label ng-if="v2" ng-if="v1">Subtração {{v1 - v2}}</label> <br>
+    <label ng-if="v2" ng-if="v1">Multiplicação {{v1 * v2}}</label> <br>
+    <label ng-if="v2" ng-if="v1">Divisão {{v1 / v2}}</label> <br>
 </body>
 </html>
 <script>

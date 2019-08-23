@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<body ng-app="ex66" ng-controller="ctrl66">
+    <h2>
+            66) A Secretaria de Meio Ambiente que controla o índice de
+            poluição mantém 3 grupos de indústrias que são altamente
+            poluentes do meio ambiente. O índice de poluição aceitável
+            varia de 0 (zero) até 0,25. Se o índice sobe para 0,3 as
+            indústrias do 1o grupo são intimadas a suspenderem suas
+            atividades, se o índice crescer para 0,4 as indústrias do 1o e
+            2o grupo são intimadas a suspenderem suas atividades, se o
+            índice atingir 0,5 todos os grupos devem ser notificados a
+            paralisarem suas atividades. Faça um algoritmo que leia o
+            índice de poluição medido e emita a notificação adequada aos
+            diferentes grupos de empresas.
+    </h2>
+    <input type="number" ng-Model="v" placeholder="digite seu salário" />
+    <br/>
+    <label ng-if="v">{{saida()}}</label>
+</body>
+</html>
+<script>
+    var app = angular.module("ex66", []);
+    app.controller("ctrl66", function($scope){
+        $scope.saida = function () {
+            vv = $scope.v;
+            if (vv < parseFloat(0.3)) {
+                return "Nível de poluição aceitável"
+            }
+            if (vv >= parseFloat(0.3) && vv < parseFloat(0.4) ) {
+                return "1º Grupo, suspendam suas atividades"
+            }
+            if (vv >= parseFloat(0.4) && vv < parseFloat(0.5)) {
+                return "1º Grupo e 2º Grupo, suspendam suas atividades"
+            }
+            if (vv >= parseFloat(0.5)) {
+                return "1º Grupo, 2º Grupo e 3º Grupo, suspendam suas atividades"
+            }
+        }})
+</script>
