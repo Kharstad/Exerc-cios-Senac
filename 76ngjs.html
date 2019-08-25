@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.js"></script>
 </head>
 
-<body ng-app="ex74" ng-controller="ctrl74">
+<body ng-app="ex76" ng-controller="ctrl76">
     <h2>
             76) Construa um algoritmo, em javascript, que leia 10 valores
             inteiros e positivos e:
@@ -35,24 +35,20 @@
     <label></label><p></p>
     <label></label><p></p>
 
-    <div ng-bind-html="saida(mult, ini, fim)"></div>
+    <div ng-bind-html="saida()"></div>
 </body>
 
 </html>
 <script>
-    var app = angular.module('ex74', ['ngSanitize']);
-    app.controller("ctrl74", function ($scope, $sce) {
-        $scope.saida = function (mult, ini, fim) { /* variáveis do HTML */
-            let result = "";
-            for (i = ini; i <= fim; i++) { /* Sistema de repetição com definição de inicio e fim com as variaveis ini & fim*/
-                if (i % mult == 0) {
-                    result += "<p>" + i + " multimplo de " + mult + "</p>"; /* Número Multiplo de mult */
-                } else {
-                    result += "<p>" + i + "</p>" /* Continuação da operação */
-                }
+    var app = angular.module('ex76', ['ngSanitize']);
+    app.controller("ctrl76", function ($scope, $sce) {
+        $scope.saida = function (n1,n2,n3,n4,n5,n6,n7,n8,n9,n10) {
+            var numeros = [n1,n2,n3,n4,n5,n6,n7,n8,n9,n10];
+            for (let i = numeros; numeros < 9; i++) {
+                
+                
             }
-            return $sce.trustAsHtml(result)
-        }
+        }        
     })
 
 </script>
